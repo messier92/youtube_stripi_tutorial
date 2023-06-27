@@ -8,6 +8,8 @@ const Products = () => {
   const [maxPrice, setMaxPrice] = useState(1000)
   const [sort, setSort] = useState(null)
 
+  const {data, loading, error} = useFetch(`/sub-categories/[filters][categories][id][$eq]=${catId}`)
+
   return (
     <div className='products'>
       <div className='left'>
